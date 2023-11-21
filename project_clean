@@ -9,16 +9,25 @@ def get_user_guess():
 def is_valid_guess(guess):
     return len(guess) == 1 and guess.isalpha()
 
+def check_guess(secret_word):
+    guess = get_user_guess().lower()
+
+    while True:
+        if guess in secret_word:
+            print(f"Good guess! {guess} is in the word.")
+            return True
+        else:
+            print(f"Sorry, {guess} is not in the word. Try again.")
+            guess = get_user_guess().lower()
+
 def main():
     word_list = ["apple", "mango", "kiwi", "tangerine", "orange"]
-    word = choose_random_word(word_list)
+    secret_word = choose_random_word(word_list)
     
-    print(word)
+    print(secret_word)
     
-    guess = get_user_guess()
-
-    if is_valid_guess(guess):
-        print("Good guess!")
+    if is_valid_guess(get_user_guess()):
+        check_guess(secret_word)
     else:
         print("Oops! That is not a valid input.")
 
