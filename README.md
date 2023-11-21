@@ -32,7 +32,7 @@ To run the Hangman Game, follow these steps:
 
 1. Clone the repository to your machine.
 2. Navigate to the project directory.
-3. Run the `handman_game` file using a Python interpreter.
+3. Run the `hangman_game` file using a Python interpreter.
 
 ## Usage
 
