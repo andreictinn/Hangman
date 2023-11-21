@@ -1,1 +1,27 @@
+import random
+
+def choose_random_word(word_list):
+    return random.choice(word_list)
+
+def get_user_guess():
+    return input("Enter a single letter: ")
+
+def is_valid_guess(guess):
+    return len(guess) == 1 and guess.isalpha()
+
+def main():
+    word_list = ["apple", "mango", "kiwi", "tangerine", "orange"]
+    word = choose_random_word(word_list)
+    
+    print(word)
+    
+    guess = get_user_guess()
+
+    if is_valid_guess(guess):
+        print("Good guess!")
+    else:
+        print("Oops! That is not a valid input.")
+
+if __name__ == "__main__":
+    main()
 
